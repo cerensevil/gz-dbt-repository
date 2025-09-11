@@ -37,8 +37,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   +location: EU
+  my_new_project:
+    mart:
+      +materialized: table
+    finance:
+      +schema: finance
 seeds:
   +location: EU
+
 snapshots:
-  +location: EU      
+  +location: EU
+
+
+
       
