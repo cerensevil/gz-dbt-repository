@@ -1,4 +1,6 @@
-with sales_margin as (select * from {{ ref("int_sales_margin") }}),
+with sales_margin as (
+    select * from {{ ref('int_sales_margin') }}
+)
 select
     orders_id,
     date_date,
@@ -8,3 +10,4 @@ select
     sum(margin) as total_margin
 from sales_margin
 group by orders_id, date_date
+
